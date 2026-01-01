@@ -1,0 +1,21 @@
+# --- 數據檔案 (Data Files) ---
+# 忽略所有 .tsv 檔案
+*.tsv
+
+# 如果你也有 .csv 或 .xlsx 也可以一併忽略
+*.csv
+*.xlsx
+
+# 如果你有專門放數據的資料夾，也可以直接忽略整個資料夾
+# data/
+# temp_data/
+
+# --- 程式執行產生的快照或暫存檔 ---
+__pycache__/
+.DS_Store
+.ipynb_checkpoints/
+
+# --- 環境設定檔 ---
+.env
+venv/
+env/
