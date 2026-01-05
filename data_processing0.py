@@ -9,16 +9,16 @@ import pandas as pd
 
 """
 
-cb = pd.read_csv("CB.tsv", sep="\t")
-bb = pd.read_csv("BB.tsv", sep="\t")
+ce = pd.read_csv("CE.tsv", sep="\t")
+be = pd.read_csv("BE.tsv", sep="\t")
 
-cb["criminal"] = 1
-bb["criminal"] = 0
+ce["criminal"] = 1
+be["criminal"] = 0
 
-bitcoin_data = pd.concat([cb, bb], axis=0, ignore_index=True)
+eth_data = pd.concat([ce, be], axis=0, ignore_index=True)
 
-print(len(cb), len(bb), len(bitcoin_data))
-print(bb["address"].nunique()) # check unique addresses in BB
-print(cb["address"].nunique()) # check unique addresses in CB
+print(len(ce), len(be), len(eth_data))
+print(be["address"].nunique()) # check unique addresses in BE
+print(ce["address"].nunique()) # check unique addresses in CE
 
-bitcoin_data.to_csv("bitcoin_data0.tsv", index=False) #save the combined data
+eth_data.to_csv("eth_data0.tsv", index=False) #save the combined data
