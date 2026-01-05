@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 from sklearn.utils.class_weight import compute_class_weight
 import numpy as np
+import json
 
 """
 
@@ -99,5 +100,6 @@ plt.show()
 # 儲存處理後的數據
 eth_data.to_csv("eth_data_processed1.tsv", index=False, sep="\t")
 
+with open("class_weights_eth.json", "w") as f:
 
-
+    json.dump(class_weights, f)
