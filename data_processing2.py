@@ -20,6 +20,15 @@ import numpy as np
 
 bitcoin_data = pd.read_csv("bitcoin_data_processed.tsv", sep="\t")
 
+
+# 提取標籤欄位，並儲存為y_train.tsv
+y_train = bitcoin_data["label_idx"].values
+y_train = pd.DataFrame(y_train, columns=['label_idx'])
+y_stat = y_train['label_idx'].value_counts().sort_index()
+y_stat.to_csv("y_train_stats.csv")
+y_train.to_csv("y_train.tsv", index=False, sep="\t")
+
+
 #print(bitcoin_data.columns.tolist())
 # 淘汰不須放入模型之欄位
 drop_cols = [
@@ -116,4 +125,4 @@ plt.show()"""
 
 
 # 儲存處理後的數據
-columns_to_use.to_csv("bitcoin_data_features.tsv", index=False, sep="\t")
+columns_to_use.to_csv("bitcoin_data_features2.tsv", index=False, sep="\t")

@@ -89,7 +89,7 @@ plt.show()"""
 
 
 # 儲存處理後的數據
-bitcoin_data.to_csv("bitcoin_data_processed.tsv", index=False, sep="\t")
+bitcoin_data.to_csv("bitcoin_data_processed1.tsv", index=False, sep="\t")
 
 
 

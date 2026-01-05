@@ -16,7 +16,7 @@ import numpy as np
 
 """
 
-features = pd.read_csv("bitcoin_data_features.tsv", sep="\t")
+features = pd.read_csv("bitcoin_data_features2.tsv", sep="\t")
 
 # 定義要刪除的冗餘欄位
 drop_redundant_cols = [
@@ -57,4 +57,4 @@ plt.show()
 
 
 # 儲存最終處理後的數據
-columns_final.to_csv("bitcoin_data_final_features.tsv", index=False, sep="\t")
+columns_final.to_csv("x_train.tsv", index=False, sep="\t")

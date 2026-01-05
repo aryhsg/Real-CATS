@@ -21,4 +21,4 @@ print(len(cb), len(bb), len(bitcoin_data))
 print(bb["address"].nunique()) # check unique addresses in BB
 print(cb["address"].nunique()) # check unique addresses in CB
 
-bitcoin_data.to_csv("bitcoin_data.tsv", index=False) #save the combined data
+bitcoin_data.to_csv("bitcoin_data0.tsv", index=False) #save the combined data
