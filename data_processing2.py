@@ -18,7 +18,7 @@ import numpy as np
 
 """
 
-bitcoin_data = pd.read_csv("bitcoin_data_processed.tsv", sep="\t")
+bitcoin_data = pd.read_csv("bitcoin_data_processed1.tsv", sep="\t")
 
 
 # 提取標籤欄位，並儲存為y_train.tsv

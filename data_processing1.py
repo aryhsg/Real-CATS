@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 from sklearn.utils.class_weight import compute_class_weight
 import numpy as np
+import json
 
 """
 
@@ -17,7 +18,7 @@ import numpy as np
 
 """
 
-bitcoin_data = pd.read_csv("bitcoin_data.tsv")
+bitcoin_data = pd.read_csv("bitcoin_data0.tsv")
 
 
 # 印出所有欄位名稱，看看它們到底長怎樣
@@ -91,5 +92,7 @@ plt.show()"""
 # 儲存處理後的數據
 bitcoin_data.to_csv("bitcoin_data_processed1.tsv", index=False, sep="\t")
 
+with open("class_weights1.json", "w") as f:
+    json.dump(class_weights, f)
 
 
