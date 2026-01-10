@@ -22,9 +22,9 @@ bitcoin_data = pd.read_csv("bitcoin_data_processed1.tsv", sep="\t")
 
 
 # 提取標籤欄位，並儲存為y_train.tsv
-y_train = bitcoin_data["label_idx"].values
-y_train = pd.DataFrame(y_train, columns=['label_idx'])
-y_stat = y_train['label_idx'].value_counts().sort_index()
+y_train = bitcoin_data["criminal"].values
+y_train = pd.DataFrame(y_train, columns=['criminal'])
+y_stat = y_train['criminal'].value_counts().sort_index()
 y_stat.to_csv("y_train_stats.csv")
 y_train.to_csv("y_train.tsv", index=False, sep="\t")
 

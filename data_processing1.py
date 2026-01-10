@@ -79,20 +79,21 @@ category_dict = {}
 for cat, num in zip(category.index, category):
     category_dict[cat] = num
 
-"""plt.figure(figsize=(12,6))
+plt.figure(figsize=(12,6))
 sns.barplot(x=list(category_dict.keys()), y=list(category_dict.values()))
 plt.xticks(rotation=45, ha='right')
 plt.title("Distribution of Labels in Bitcoin Data")
 plt.xlabel("Label")
 plt.ylabel("Count")
 plt.tight_layout()
-plt.show()"""
+plt.show()
 
 
 # 儲存處理後的數據
-bitcoin_data.to_csv("bitcoin_data_processed1.tsv", index=False, sep="\t")
+"""bitcoin_data.to_csv("bitcoin_data_processed1.tsv", index=False, sep="\t")
 
 with open("class_weights1.json", "w") as f:
-    json.dump(class_weights, f)
+    json.dump(class_weights, f)"""
 
 
+print(category_dict)
